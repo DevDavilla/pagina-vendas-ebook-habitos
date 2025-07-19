@@ -964,3 +964,196 @@ body {
     margin-bottom: 20px;
   }
 }
+/* --- SEÇÃO FINAL CTA (PREÇO E BOTÃO) --- */
+.final-cta-section {
+  background-color: #0d0d0d; /* Fundo escuro */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Os estilos para .section-title e .section-subtitle já foram definidos e serão herdados */
+
+.price-box {
+  background-color: #282828; /* Fundo do box de preço */
+  padding: 40px;
+  border-radius: 10px;
+  margin: 60px auto 40px auto; /* Centraliza e define margens */
+  max-width: 500px; /* Limita a largura */
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3); /* Sombra dourada de destaque */
+  border: 2px solid #ffd700; /* Borda dourada forte */
+}
+
+.price-box .price-label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2em;
+  color: #a0a0a0;
+  display: block; /* Quebra de linha */
+  margin-bottom: 10px;
+}
+
+.price-box .old-price {
+  color: #b0b0b0;
+  text-decoration: line-through; /* Linha no meio para indicar preço anterior */
+}
+
+.price-box .price-value {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.5em; /* Tamanho ENORME para o preço */
+  font-weight: 900;
+  color: #ffd700; /* Dourado vibrante */
+  display: block;
+  margin-bottom: 15px;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.6); /* Efeito de brilho */
+}
+
+.price-box .payment-options {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1em;
+  color: #e0e0e0;
+  display: block;
+}
+
+.guarantee-text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.15em;
+  color: #e0e0e0;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  display: flex; /* Para alinhar ícone e texto */
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600; /* Texto mais forte */
+}
+
+.guarantee-text .icon {
+  font-size: 1.5em;
+  color: #ffd700; /* Ícone em dourado */
+}
+
+.final-cta-button {
+  font-size: 1.4em; /* Botão maior */
+  padding: 22px 50px;
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.5); /* Sombra mais forte */
+  background-color: #ffd700; /* Dourado total */
+  color: #121212; /* Texto escuro */
+  border: none;
+  cursor: pointer;
+}
+
+.final-cta-button:hover {
+  background-color: #e0b800;
+  transform: translateY(-5px); /* Efeito mais pronunciado no hover */
+  box-shadow: 0 12px 25px rgba(255, 215, 0, 0.6);
+}
+
+/* --- RODAPÉ --- */
+.site-footer {
+  background-color: #000000; /* Fundo preto total para o rodapé */
+  color: #a0a0a0;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 0.9em;
+  border-top: 1px solid rgba(255, 215, 0, 0.1); /* Linha dourada sutil no topo */
+}
+
+.site-footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.footer-links a {
+  color: #ffd700; /* Links em dourado */
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #e0e0e0; /* Cor mais clara no hover */
+}
+
+/* --- Media Queries para Responsividade da Seção 9 e Rodapé --- */
+@media (max-width: 768px) {
+  .final-cta-section {
+    padding: 60px 20px;
+  }
+
+  .price-box {
+    padding: 30px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .price-box .price-value {
+    font-size: 2.8em;
+  }
+
+  .guarantee-text {
+    font-size: 1.05em;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .final-cta-button {
+    font-size: 1.2em;
+    padding: 18px 40px;
+  }
+
+  .site-footer {
+    padding: 25px 15px;
+  }
+
+  .site-footer .container {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .final-cta-section {
+    padding: 50px 15px;
+  }
+
+  .price-box {
+    padding: 25px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+  }
+
+  .price-box .price-value {
+    font-size: 2.2em;
+  }
+
+  .price-box .payment-options {
+    font-size: 1em;
+  }
+
+  .guarantee-text {
+    font-size: 1em;
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+
+  .final-cta-button {
+    font-size: 1.1em;
+    padding: 15px 30px;
+    width: 100%; /* Ocupa a largura total em mobile */
+  }
+
+  .site-footer {
+    padding: 20px 10px;
+    font-size: 0.8em;
+  }
+
+  .footer-links a {
+    margin: 0 8px;
+    display: block; /* Links um abaixo do outro em mobile */
+    margin-bottom: 5px;
+  }
+}
