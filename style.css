@@ -1,0 +1,308 @@
+/* Resets Básicos para consistência entre navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho do elemento */
+}
+
+body {
+  font-family: "Open Sans", sans-serif; /* Fonte padrão para todo o corpo */
+  background-color: #121212; /* Fundo bem escuro (quase preto) para o dark mode */
+  color: #e0e0e0; /* Cor do texto padrão (cinza claro) */
+  line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
+  overflow-x: hidden; /* Evita rolagem horizontal indesejada */
+}
+
+/* Estilo para o contêiner geral do conteúdo */
+.container {
+  max-width: 1200px; /* Largura máxima do conteúdo */
+  margin: 0 auto; /* Centraliza o contêiner na página */
+  padding: 20px; /* Espaçamento interno */
+}
+
+/* --- HERO SECTION (DOBRA SUPERIOR) --- */
+.hero-section {
+  background-color: #0d0d0d; /* Fundo um pouco mais escuro que o body para contraste */
+  min-height: 100vh; /* Ocupa a altura total da viewport (tela) */
+  display: flex; /* Para centralizar o conteúdo verticalmente */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  text-align: center; /* Alinha texto ao centro */
+  padding: 50px 20px; /* Espaçamento interno superior/inferior e lateral */
+  position: relative; /* Para posicionar elementos internos, como um background pattern */
+  overflow: hidden; /* Garante que nada saia do limite da seção */
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Padrão abstrato sutil (ex: listras diagonais, formas geométricas) */
+  background: repeating-linear-gradient(
+    -45deg,
+    #1a1a1a,
+    #1a1a1a 5px,
+    #0d0d0d 5px,
+    #0d0d0d 10px
+  );
+  opacity: 0.1; /* Transparência para ser sutil */
+  z-index: 0; /* Fica atrás do conteúdo */
+}
+
+.hero-section .container {
+  position: relative; /* Garante que o conteúdo fique acima do background pattern */
+  z-index: 1;
+  display: flex; /* Usar flexbox para organizar elementos internos */
+  flex-direction: column; /* Empilha os elementos verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  max-width: 900px; /* Ajusta largura para o conteúdo da dobra superior */
+}
+
+.hero-section h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.5em; /* Tamanho do título principal */
+  font-weight: 900; /* Super negrito */
+  color: #ffd700; /* Cor dourada para o título, como um toque "Peaky Blinders" */
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-transform: uppercase; /* Deixa em maiúsculas */
+  letter-spacing: 1.5px; /* Espaçamento entre letras */
+}
+
+.hero-section .subtitle {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4em; /* Tamanho do subtítulo */
+  color: #a0a0a0; /* Cinza um pouco mais escuro */
+  margin-bottom: 40px;
+  max-width: 700px; /* Limita a largura para melhor leitura */
+}
+
+.cta-button {
+  display: inline-block; /* Permite aplicar padding e margem */
+  background-color: #ffd700; /* Dourado do botão */
+  color: #121212; /* Texto escuro no botão */
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2em;
+  font-weight: 700;
+  padding: 18px 40px;
+  border-radius: 5px; /* Bordas levemente arredondadas */
+  text-decoration: none; /* Remove sublinhado */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Efeito de transição */
+  margin-top: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4); /* Sombra para destaque */
+}
+
+.cta-button:hover {
+  background-color: #e0b800; /* Dourado mais escuro ao passar o mouse */
+  transform: translateY(-3px); /* Leve levantada */
+}
+
+.ebook-cover {
+  width: 280px; /* Largura da capa */
+  height: auto;
+  margin-top: 60px; /* Espaçamento da capa em relação ao botão */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra para profundidade */
+  border-radius: 8px; /* Bordas arredondadas para a capa */
+  object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+}
+
+/* --- Media Queries para Responsividade --- */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5em; /* Reduz tamanho da fonte para telas menores */
+  }
+
+  .hero-section .subtitle {
+    font-size: 1.1em;
+  }
+
+  .cta-button {
+    font-size: 1em;
+    padding: 15px 30px;
+  }
+
+  .ebook-cover {
+    width: 200px; /* Reduz tamanho da capa em telas menores */
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 1.8em;
+  }
+
+  .hero-section .subtitle {
+    font-size: 1em;
+  }
+
+  .cta-button {
+    width: 90%; /* Botão ocupa quase a largura total */
+    text-align: center;
+  }
+}
+
+/* --- SEÇÃO PROBLEMA X SOLUÇÃO --- */
+.problem-solution-section {
+  background-color: #1a1a1a; /* Fundo um pouco mais claro que o body para contraste */
+  padding: 80px 20px; /* Espaçamento interno */
+  text-align: center; /* Centraliza o texto */
+}
+
+.section-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.8em;
+  font-weight: 700;
+  color: #ffd700; /* Dourado para os títulos das seções */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-subtitle {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.3em;
+  color: #a0a0a0;
+  margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.problems-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Layout responsivo em grade */
+  gap: 40px; /* Espaçamento entre os itens da grade */
+  margin-bottom: 60px;
+}
+
+.problem-item {
+  background-color: #282828; /* Fundo dos cards de problema */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+  text-align: center;
+  transition: transform 0.3s ease; /* Efeito ao passar o mouse */
+}
+
+.problem-item:hover {
+  transform: translateY(-10px); /* Leve levantada ao passar o mouse */
+}
+
+.problem-item .icon {
+  font-size: 3em; /* Tamanho dos ícones */
+  color: #ffd700; /* Cor dourada para os ícones */
+  margin-bottom: 20px;
+  display: block; /* Garante que o ícone ocupe sua própria linha */
+}
+
+.problem-item h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5em;
+  color: #e0e0e0; /* Texto claro para os títulos dos problemas */
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.problem-item p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  color: #b0b0b0; /* Cinza um pouco mais escuro para o texto dos problemas */
+}
+
+.solution-transition {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6em;
+  color: #ffd700; /* Dourado para a transição */
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.solution-intro {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2em;
+  color: #e0e0e0;
+  margin-bottom: 50px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Estilos específicos para o botão CTA secundário (se necessário, mas herda do principal) */
+.secondary-cta {
+  margin-top: 0; /* Ajusta a margem superior se o botão estiver logo abaixo de um parágrafo */
+}
+
+/* --- Media Queries para Responsividade da Seção 2 --- */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2em;
+  }
+
+  .section-subtitle {
+    font-size: 1.1em;
+  }
+
+  .problems-grid {
+    grid-template-columns: 1fr; /* Uma coluna em telas menores */
+  }
+
+  .problem-item {
+    padding: 25px;
+  }
+
+  .problem-item .icon {
+    font-size: 2.5em;
+  }
+
+  .problem-item h3 {
+    font-size: 1.3em;
+  }
+
+  .solution-transition {
+    font-size: 1.4em;
+  }
+
+  .solution-intro {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.6em;
+  }
+
+  .section-subtitle {
+    font-size: 1em;
+  }
+
+  .problem-item {
+    padding: 20px;
+  }
+
+  .problem-item .icon {
+    font-size: 2em;
+  }
+
+  .problem-item h3 {
+    font-size: 1.1em;
+  }
+
+  .solution-transition {
+    font-size: 1.2em;
+  }
+
+  .solution-intro {
+    font-size: 1em;
+  }
+}
