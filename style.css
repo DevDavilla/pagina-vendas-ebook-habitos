@@ -720,3 +720,247 @@ body {
     font-size: 0.95em;
   }
 }
+
+/* --- SEÇÃO SOBRE O AUTOR --- */
+.about-author-section {
+  background-color: #0d0d0d; /* Fundo escuro */
+  padding: 80px 20px;
+  text-align: center; /* Centraliza o título */
+}
+
+/* Os estilos para .section-title já foram definidos e serão herdados */
+
+.about-author-section .container {
+  max-width: 900px; /* Limita a largura do conteúdo para melhor leitura */
+}
+
+.author-content {
+  display: flex;
+  flex-direction: column; /* Padrão para telas menores: foto em cima, texto embaixo */
+  align-items: center; /* Centraliza a foto e o texto */
+  gap: 40px; /* Espaçamento entre a foto e o texto da bio */
+  margin-top: 60px;
+}
+
+.author-photo {
+  width: 200px; /* Tamanho da foto do autor */
+  height: 200px;
+  border-radius: 50%; /* Torna a foto redonda */
+  object-fit: cover; /* Garante que a imagem preencha o círculo */
+  border: 5px solid #ffd700; /* Borda dourada em volta da foto */
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4); /* Sombra dourada para destaque */
+  transition: transform 0.3s ease;
+}
+
+.author-photo:hover {
+  transform: scale(1.05); /* Pequeno zoom ao passar o mouse */
+}
+
+.author-bio {
+  text-align: left; /* Alinha o texto da biografia à esquerda */
+  color: #e0e0e0;
+  line-height: 1.7;
+  font-size: 1.1em;
+}
+
+.author-bio p {
+  margin-bottom: 15px; /* Espaçamento entre parágrafos da bio */
+}
+
+.author-bio p:last-of-type {
+  margin-bottom: 30px; /* Mais espaço antes do botão */
+}
+
+.author-bio .author-name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2em; /* Tamanho do seu nome */
+  font-weight: 700;
+  color: #ffd700; /* Dourado para o nome */
+  margin-bottom: 20px;
+  text-align: center; /* Centraliza o nome */
+}
+
+/* Estilo para destaque dentro da biografia (ex: negrito) */
+.author-bio strong {
+  color: #ffd700;
+}
+
+/* --- Media Queries para Responsividade da Seção 7 --- */
+@media (min-width: 769px) {
+  .author-content {
+    flex-direction: row; /* Para telas maiores: foto ao lado do texto */
+    text-align: left;
+    align-items: flex-start; /* Alinha a foto com o topo do texto */
+  }
+
+  .author-photo {
+    margin-right: 40px; /* Espaçamento à direita da foto */
+    flex-shrink: 0; /* Impede que a foto encolha */
+  }
+
+  .author-bio .author-name {
+    text-align: left; /* Alinha o nome à esquerda em telas maiores */
+  }
+}
+
+@media (max-width: 768px) {
+  .about-author-section {
+    padding: 60px 20px;
+  }
+
+  .author-content {
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  .author-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .author-bio .author-name {
+    font-size: 1.8em;
+  }
+
+  .author-bio {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-author-section {
+    padding: 50px 15px;
+  }
+
+  .author-content {
+    gap: 25px;
+    margin-top: 30px;
+  }
+
+  .author-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .author-bio .author-name {
+    font-size: 1.5em;
+  }
+
+  .author-bio {
+    font-size: 0.95em;
+  }
+}
+/* --- SEÇÃO FAQ --- */
+.faq-section {
+  background-color: #1a1a1a; /* Fundo para contraste com a seção anterior */
+  padding: 80px 20px;
+  text-align: center; /* Centraliza o título */
+}
+
+/* Os estilos para .section-title e .section-subtitle já foram definidos e serão herdados */
+
+.faq-section .container {
+  max-width: 900px; /* Limita a largura do conteúdo para melhor leitura */
+}
+
+.faq-items {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  text-align: left; /* Alinha o texto das perguntas/respostas à esquerda */
+}
+
+.faq-item {
+  background-color: #282828; /* Fundo dos cards de FAQ */
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 20px; /* Espaçamento entre os itens FAQ */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-left: 5px solid #ffd700; /* Borda dourada à esquerda */
+  transition: background-color 0.3s ease;
+}
+
+.faq-item:hover {
+  background-color: #333333; /* Fundo um pouco mais claro ao passar o mouse */
+}
+
+.faq-question {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4em;
+  color: #ffd700; /* Pergunta em dourado para destaque */
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.faq-answer {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.05em;
+  color: #e0e0e0; /* Resposta em texto claro */
+  line-height: 1.7;
+}
+
+.faq-answer strong {
+  color: #ffd700; /* Destaque dourado em palavras chave na resposta */
+}
+
+.final-cta-text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1em;
+  color: #a0a0a0;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+/* --- Media Queries para Responsividade da Seção 8 --- */
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 60px 20px;
+  }
+
+  .faq-items {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .faq-item {
+    padding: 20px;
+    margin-bottom: 15px;
+  }
+
+  .faq-question {
+    font-size: 1.2em;
+  }
+
+  .faq-answer {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-section {
+    padding: 50px 15px;
+  }
+
+  .faq-items {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .faq-item {
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+
+  .faq-question {
+    font-size: 1.1em;
+  }
+
+  .faq-answer {
+    font-size: 0.95em;
+  }
+
+  .final-cta-text {
+    font-size: 1em;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+}
