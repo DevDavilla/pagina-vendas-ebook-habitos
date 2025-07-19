@@ -410,3 +410,95 @@ body {
     font-size: 0.95em;
   }
 }
+
+/* --- SEÇÃO PARA QUEM É ESTE EBOOK --- */
+.for-whom-section {
+  background-color: #1a1a1a; /* Fundo para contraste com a seção anterior */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Os estilos para .section-title e .section-subtitle já foram definidos e serão herdados */
+
+.for-whom-list {
+  display: flex;
+  flex-direction: column; /* Lista vertical */
+  gap: 25px; /* Espaçamento entre os itens */
+  max-width: 800px; /* Limita a largura da lista para melhor leitura */
+  margin: 60px auto 80px auto; /* Centraliza a lista e define margens */
+  text-align: left; /* Alinha o texto da lista à esquerda */
+}
+
+.for-whom-item {
+  display: flex; /* Para alinhar o ícone e o texto na mesma linha */
+  align-items: flex-start; /* Alinha o início do texto com o ícone */
+  gap: 15px; /* Espaçamento entre o ícone e o texto */
+  padding: 15px 20px;
+  background-color: #282828; /* Fundo do item */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-left: 5px solid #ffd700; /* Borda dourada à esquerda para destaque */
+}
+
+.for-whom-item .icon {
+  font-size: 1.8em; /* Tamanho do ícone */
+  color: #ffd700; /* Cor dourada para o ícone */
+  flex-shrink: 0; /* Impede que o ícone encolha */
+  line-height: 1; /* Alinha o ícone verticalmente */
+  margin-top: 3px; /* Pequeno ajuste visual */
+}
+
+.for-whom-item p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1em;
+  color: #e0e0e0; /* Texto claro */
+  line-height: 1.6;
+}
+
+/* --- Media Queries para Responsividade da Seção 4 --- */
+@media (max-width: 768px) {
+  .for-whom-list {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    padding: 0 10px; /* Ajusta padding em telas menores */
+  }
+
+  .for-whom-item {
+    flex-direction: row; /* Mantém ícone e texto na mesma linha */
+    align-items: flex-start;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .for-whom-item .icon {
+    font-size: 1.5em;
+    margin-top: 0;
+  }
+
+  .for-whom-item p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .for-whom-list {
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .for-whom-item {
+    padding: 12px;
+  }
+
+  .for-whom-item .icon {
+    font-size: 1.3em;
+  }
+
+  .for-whom-item p {
+    font-size: 0.95em;
+  }
+}
+.negrito {
+  font-weight: bold;
+}
