@@ -306,3 +306,107 @@ body {
     font-size: 1em;
   }
 }
+
+.benefits-section {
+  background-color: #0d0d0d; /* Fundo mais escuro para contraste com a seção anterior */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Os estilos para .section-title e .section-subtitle já foram definidos e serão herdados */
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Layout responsivo em grade */
+  gap: 40px; /* Espaçamento entre os itens */
+  margin-top: 60px;
+  margin-bottom: 80px; /* Espaçamento antes do botão CTA */
+}
+
+.benefit-item {
+  background-color: #1a1a1a; /* Fundo dos cards de benefício */
+  padding: 35px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Sombra mais pronunciada */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeitos ao passar o mouse */
+  border: 1px solid rgba(255, 215, 0, 0.1); /* Borda sutil dourada */
+}
+
+.benefit-item:hover {
+  transform: translateY(-15px); /* Levanta mais ao passar o mouse */
+  box-shadow: 0 12px 30px rgba(255, 215, 0, 0.2); /* Sombra dourada mais intensa */
+}
+
+.benefit-item .icon {
+  font-size: 3.2em; /* Tamanho dos ícones */
+  color: #ffd700; /* Dourado vibrante para os ícones */
+  margin-bottom: 25px;
+  display: block;
+}
+
+.benefit-item h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6em;
+  color: #ffd700; /* Títulos dos benefícios em dourado para destaque */
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.benefit-item p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.05em;
+  color: #b0b0b0;
+  line-height: 1.7;
+}
+
+/* --- Media Queries para Responsividade da Seção 3 --- */
+@media (max-width: 768px) {
+  .benefits-grid {
+    grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    gap: 30px;
+  }
+
+  .benefit-item {
+    padding: 30px;
+  }
+
+  .benefit-item .icon {
+    font-size: 2.8em;
+  }
+
+  .benefit-item h3 {
+    font-size: 1.4em;
+  }
+}
+
+@media (max-width: 480px) {
+  .benefits-section {
+    padding: 60px 15px;
+  }
+
+  .benefits-grid {
+    gap: 25px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+
+  .benefit-item {
+    padding: 25px;
+  }
+
+  .benefit-item .icon {
+    font-size: 2.5em;
+  }
+
+  .benefit-item h3 {
+    font-size: 1.2em;
+  }
+
+  .benefit-item p {
+    font-size: 0.95em;
+  }
+}
