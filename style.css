@@ -615,3 +615,108 @@ body {
     font-size: 2em;
   }
 }
+
+/* --- SEÇÃO BÔNUS --- */
+.bonus-section {
+  background-color: #1a1a1a; /* Fundo para contraste com a seção anterior */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Os estilos para .section-title e .section-subtitle já foram definidos e serão herdados */
+
+.bonus-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Layout responsivo em grade */
+  gap: 40px; /* Espaçamento entre os itens de bônus */
+  margin-top: 60px;
+  margin-bottom: 80px; /* Espaçamento antes do botão CTA */
+}
+
+.bonus-item {
+  background-color: #282828; /* Fundo dos cards de bônus */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 4px solid #ffd700; /* Borda inferior dourada para destaque */
+}
+
+.bonus-item:hover {
+  transform: translateY(-8px); /* Leve levantada ao passar o mouse */
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.2); /* Sombra mais destacada */
+}
+
+.bonus-item .icon {
+  font-size: 3.2em; /* Tamanho dos ícones */
+  color: #ffd700; /* Dourado vibrante para os ícones */
+  margin-bottom: 25px;
+  display: block;
+}
+
+.bonus-item h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6em;
+  color: #e0e0e0; /* Títulos dos bônus em texto claro */
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.bonus-item p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.05em;
+  color: #b0b0b0;
+  line-height: 1.7;
+}
+
+/* --- Media Queries para Responsividade da Seção 6 --- */
+@media (max-width: 768px) {
+  .bonus-grid {
+    grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    gap: 30px;
+  }
+
+  .bonus-item {
+    padding: 25px;
+  }
+
+  .bonus-item .icon {
+    font-size: 2.8em;
+  }
+
+  .bonus-item h3 {
+    font-size: 1.4em;
+  }
+}
+
+@media (max-width: 480px) {
+  .bonus-section {
+    padding: 60px 15px;
+  }
+
+  .bonus-grid {
+    gap: 25px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+
+  .bonus-item {
+    padding: 20px;
+  }
+
+  .bonus-item .icon {
+    font-size: 2.5em;
+  }
+
+  .bonus-item h3 {
+    font-size: 1.2em;
+  }
+
+  .bonus-item p {
+    font-size: 0.95em;
+  }
+}
