@@ -502,3 +502,116 @@ body {
 .negrito {
   font-weight: bold;
 }
+
+/* --- SEÇÃO DEPOIMENTOS --- */
+.testimonials-section {
+  background-color: #0d0d0d; /* Fundo escuro, mantém consistência */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Os estilos para .section-title e .section-subtitle já foram definidos e serão herdados */
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Layout responsivo em grade */
+  gap: 40px; /* Espaçamento entre os depoimentos */
+  margin-top: 60px;
+  margin-bottom: 60px; /* Espaçamento após a grade */
+}
+
+.testimonial-item {
+  background-color: #1a1a1a; /* Fundo dos cards de depoimento */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: left; /* Alinha o texto do depoimento à esquerda */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 4px solid #ffd700; /* Borda superior dourada */
+}
+
+.testimonial-item:hover {
+  transform: translateY(-8px); /* Leve levantada ao passar o mouse */
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.2); /* Sombra mais destacada */
+}
+
+.testimonial-item .quote {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.15em;
+  color: #e0e0e0; /* Texto claro para a citação */
+  margin-bottom: 20px;
+  line-height: 1.7;
+  font-style: italic; /* Depoimentos em itálico para destaque */
+  position: relative;
+  padding-left: 20px; /* Espaço para aspas */
+}
+
+.testimonial-item .quote::before {
+  content: "“"; /* Aspas de abertura */
+  position: absolute;
+  left: 0;
+  top: -5px;
+  font-size: 3em;
+  color: rgba(255, 215, 0, 0.5); /* Cor dourada transparente para aspas */
+  line-height: 1;
+}
+
+.testimonial-item .author {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  color: #ffd700; /* Nome do autor em dourado */
+  font-weight: 600;
+  text-align: right; /* Alinha o nome à direita */
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed rgba(255, 215, 0, 0.3); /* Linha tracejada dourada para separar */
+}
+
+/* --- Media Queries para Responsividade da Seção 5 --- */
+@media (max-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    gap: 30px;
+  }
+
+  .testimonial-item {
+    padding: 25px;
+  }
+
+  .testimonial-item .quote {
+    font-size: 1.05em;
+    padding-left: 15px;
+  }
+
+  .testimonial-item .quote::before {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-section {
+    padding: 60px 15px;
+  }
+
+  .testimonials-grid {
+    gap: 25px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+
+  .testimonial-item {
+    padding: 20px;
+  }
+
+  .testimonial-item .quote {
+    font-size: 1em;
+    padding-left: 10px;
+  }
+
+  .testimonial-item .quote::before {
+    font-size: 2em;
+  }
+}
